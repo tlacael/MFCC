@@ -11,7 +11,7 @@ in the callback. Although it works, there is definitely more that can be done
 to streamline this further.
 
 Example call:
-'''c++
+```c++
 
 int sr = 44100;
 int numFilters = 48;
@@ -28,4 +28,4 @@ MFCC mfcc;
 mfcc.init(sr, numFilters, specLen, numCoeffs);
 mfcc.getCoefficients(spectrum, mfccs);
 
-'''
+```
