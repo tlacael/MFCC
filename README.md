@@ -13,19 +13,24 @@ to streamline this further.
 Example call:
 ```c++
 
-int sr = 44100;
-int numFilters = 48;
-FFTlen = 512;
-int specLen = FFTlen/2+1;
-int numCoeffs = 20;
+int sr = 44100; // Sample rate
+int FFTlen = 512; // Length of FFT window
+int specLen = FFTlen/2+1; // length of resulting magnitude spectrum
+int numFilters = 48; // number of filters for MFCC calc
+int numCoeffs = 20; // number of MFCC coefficients to calculate
 
+// Allocate space for spectrum and MFCCs
 float *spectrum = new float[specLen];
 float *mfccs = new float[numCoeffs];
 
+// TODO:
 // calculate magnitude-spectrum of a frame of audio
+// using FFTW or similar
 
+// Create and init MFCC class
 MFCC mfcc;
 mfcc.init(sr, numFilters, specLen, numCoeffs);
+// Extract MFCCs
 mfcc.getCoefficients(spectrum, mfccs);
 
 ```
