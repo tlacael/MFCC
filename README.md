@@ -5,10 +5,10 @@ MFCC extractor class for use with real-time audio callbacks.
 
 
 This code has been adapted from libmfcc (https://code.google.com/p/libmfcc/) 
-to work in the context of a real-time audio callback. As a C++ class, and 
+to work in the context of a real-time audio callback in C++.
 MFCC specific calculations are done at initialization to minimize calculations
-in the callback. Although it works, there is definitely more that can be done
-to streamline this further.
+in the callback. Although it works, there is more that can be done to streamline 
+this further.
 
 Example call:
 ```c++
